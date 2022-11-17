@@ -1,0 +1,7 @@
+flask==2.2.2
+Jinja2>=3.0
+itsdangerous>=2.0
+Werkzeug>=2.2.2
+click>=8.0
+colorama==0.4.6
+MarkupSafe>=2.0
