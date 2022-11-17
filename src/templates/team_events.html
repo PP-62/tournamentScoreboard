@@ -20,7 +20,7 @@
         <h1 class="h2">Tournament members</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <a href="team_events" class="btn btn-sm btn-outline-secondary">team_events</a>
+                <a href="/" class="btn btn-sm btn-outline-secondary">members</a>
                 <a href="events" class="btn btn-sm btn-outline-secondary">events</a>
             </div>
         </div>
@@ -55,28 +55,27 @@
                     </table>
                 </div>
             </div>
+
             <div class="col">
-                <h2>members</h2>
+                <h2>Event Points</h2>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Points</th>
+                                <th scope="col">position</th>
+                                {% for event in events %}
+                                <th scope="col">event #{{ event[0] }}</th>
+                                {% endfor %}
                             </tr>
                         </thead>
                         <tbody>
-                            {% for member in range(20) %}
+                            {% for pos in teams %}
                             <tr>
-                                <td>{{ individual_members[member][0] }}</td>
-                                <td>
-                                    <input type="text" class="form-control" value="{{ individual_members[member][1] }}"
-                                        name="{{individual_members[member][0]}}">
-                                </td>
-                                <td>{{ individual_members[member][2] }}</td>
+                                {% for event in events[0] %}
+                                <td>{{ team_members[member][0] }}</td>
+                                {% endfor %}
                             </tr>
-                            {% endfor %}
+                            
                         </tbody>
                     </table>
                 </div>
